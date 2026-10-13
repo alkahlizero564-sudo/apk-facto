@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر النيلين | للأزياء الرجالية السودانية الفاخرة</title>
+    <!-- Google Fonts: Tajawal & Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #8b2635; /* عودي سوداني فاخر */
+            --primary-dark: #671924;
+            --primary-light: #ab3344;
+            --accent: #c49a45; /* ذهبي تراثي */
+            --accent-hover: #b08633;
+            --bg-sand: #fbf9f5;
+            --card-bg: #ffffff;
+            --text-dark: #222222;
+            --text-muted: #6b7280;
+            --border-color: #eedec7;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 24px rgba(139, 38, 53, 0.08);
+            --shadow-lg: 0 16px 36px rgba(0,0,0,0.12);
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-sand);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #1b1b1b, #2d2621);
+            color: #f7e6c4;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid var(--accent);
+        }
+        .announcement-bar span {
+            font-weight: 500;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #f0e6dc;
+        }
+
+        .navbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-emblem {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(139,38,53,0.3);
+        }
+
+        .logo-text h1 {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-icon {
+            position: relative;
+            background: #f7f3ed;
+            border: 1px solid #ebd9c8;
+            color: var(--text-dark);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+
+        .btn-icon:hover {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .badge-count {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: bold;
+            min-width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4px;
+            border: 2px solid #fff;
+        }
+
+        .btn-custom-tailor {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-custom-tailor:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(196, 154, 69, 0.35);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #2b1b15 0%, #462529 60%, #1c0e12 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.6) 100%),
+                        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c49a45' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(196, 154, 69, 0.25);
+            border: 1px solid var(--accent);
+            color: #fce8bd;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .hero h2 {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.1rem, 5vw, 3.4rem);
+            margin-bottom: 14px;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .hero h2 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            color: #e5d7c9;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .hero-feat-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* Controls: Search, Filter Tabs */
+        .controls-section {
+            max-width: 1280px;
+            margin: -25px auto 30px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .controls-card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 18px 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #ebd9c8;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .search-sort-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 240px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 42px 12px 16px;
+            border: 1px solid #dfcfc0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+            background: #faf7f2;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(139,38,53,0.12);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9c8e82;
+            font-size: 1.1rem;
+        }
+
+        .sort-select {
+            padding: 12px 16px;
+            border: 1px solid #dfcfc0;
+            border-radius: 10px;
+            background: #faf7f2;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .categories-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+
+        .categories-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+        .categories-scroll::-webkit-scrollbar-thumb {
+            background: #d8c2b0;
+            border-radius: 10px;
+        }
+
+        .cat-btn {
+            background: #f7f1e9;
+            border: 1px solid #e7d8c9;
+            padding: 9px 20px;
+            border-radius: 30px;
+            color: #55443d;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cat-btn.active, .cat-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(139,38,53,0.2);
+        }
+
+        /* Products Grid */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+            flex: 1;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .section-header h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: #3b2824;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header h3::after {
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid #efe3d5;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: #d6bda5;
+        }
+
+        .card-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background: #ede6dd;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .card-img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .tag-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(139, 38, 53, 0.9);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .fabric-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 14px;
+            background: rgba(255, 255, 255, 0.92);
+            color: #473229;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            border: 1px solid #e1d3c5;
+        }
+
+        .card-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-category {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #2b1f1a;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: color 0.2s;
+            font-family: 'Amiri', serif;
+            line-height: 1.35;
+        }
+
+        .card-title:hover {
+            color: var(--primary);
+        }
+
+        .card-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 14px;
+            border-top: 1px dashed #eedec7;
+        }
+
+        .card-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-val {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .price-currency {
+            font-size: 0.75rem;
+            color: #7c685f;
+            font-weight: 500;
+        }
+
+        .btn-add-cart {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-add-cart:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 4px 10px rgba(139,38,53,0.3);
+            transform: scale(1.02);
+        }
+
+        /* Cart Drawer (Side Modal) */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            z-index: 210;
+            transform: translateX(-100%);
+            transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 10px 0 30px rgba(0,0,0,0.2);
+        }
+
+        .cart-overlay.active .cart-drawer {
+            transform: translateX(0);
+        }
+
+        .cart-header {
+            padding: 20px;
+            background: #faf6f0;
+            border-bottom: 1px solid #ebd9c8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart-header h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-close {
+            background: transparent;
+            border: none;
+            font-size: 1.3rem;
+            color: #8c776b;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .btn-close:hover {
+            background: #eee4d8;
+            color: var(--primary);
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .empty-cart-state {
+            text-align: center;
+            margin: auto;
+            padding: 40px 20px;
+            color: #8e7a6e;
+        }
+        .empty-cart-state i {
+            font-size: 4rem;
+            color: #d8c4b2;
+            margin-bottom: 16px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 14px;
+            background: #faf8f5;
+            border: 1px solid #ebd9c8;
+            border-radius: var(--radius-md);
+            padding: 12px;
+        }
+
+        .cart-item img {
+            width: 75px;
+            height: 85px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cart-item-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #2b1d17;
+            font-family: 'Amiri', serif;
+        }
+
+        .cart-item-size {
+            font-size: 0.75rem;
+            color: #7b6a62;
+        }
+
+        .cart-item-price {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .cart-qty-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 6px;
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #dfcfc0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            background: none;
+            border: none;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            background: #f5ece2;
+        }
+
+        .qty-display {
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        .btn-remove-item {
+            color: #c94a4a;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .btn-remove-item:hover {
+            color: #a82020;
+            text-decoration: underline;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            background: #faf6f0;
+            border-top: 1px solid #ebd9c8;
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+        }
+
+        .cart-total-row span {
+            font-size: 1.05rem;
+            color: #55443c;
+            font-weight: 600;
+        }
+
+        .cart-total-sum {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .checkout-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-checkout-wa {
+            background: #25d366;
+            color: #ffffff;
+            border: none;
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-checkout-wa:hover {
+            background: #20ba59;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-checkout-normal {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-checkout-normal:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Product Detail Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 300;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: #fff;
+            width: 100%;
+            max-width: 840px;
+            max-height: 90vh;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-img-col {
+            background: #f4ede3;
+            height: 100%;
+            min-height: 380px;
+            position: relative;
+        }
+
+        .modal-img-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-info-col {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 10;
+            background: #ffffff;
+            border: 1px solid #ebd9c8;
+            color: #44322a;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .modal-info-col h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.7rem;
+            color: #2e1c15;
+            margin-bottom: 6px;
+        }
+
+        .modal-category-text {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .modal-price-box {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .modal-desc {
+            font-size: 0.9rem;
+            color: #55443c;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .spec-item {
+            display: flex;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #493b34;
+            margin-bottom: 8px;
+        }
+        .spec-item i {
+            color: var(--accent);
+        }
+
+        .size-picker-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #2b1e19;
+        }
+
+        .sizes-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .size-chip {
+            border: 1px solid #d4c2b0;
+            background: #faf6f0;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .size-chip.active, .size-chip:hover {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .modal-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Custom Tailoring Modal (طلب تفصيل خاص) */
+        .tailor-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .form-group label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #44322a;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 10px;
+            border: 1px solid #d8c3b0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            background: #fdfbf7;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            background: #fff;
+        }
+
+        /* Sudanese Heritage Info Banner */
+        .culture-banner {
+            background: #f1e7d9;
+            border: 1px solid #dec8b2;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin: 40px auto 20px auto;
+            max-width: 1280px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .culture-img {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            height: 220px;
+        }
+
+        .culture-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .culture-content h4 {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .culture-content p {
+            color: #5d4c42;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .culture-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .c-tag {
+            background: #e3d2be;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #3f2e24;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #2b1f1a;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            z-index: 1000;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            border: 1px solid var(--accent);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1310;
+            color: #cbb9ad;
+            margin-top: auto;
+            border-top: 3px solid var(--accent);
+            padding: 45px 20px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .footer-col h5 {
+            font-family: 'Amiri', serif;
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        .footer-col h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .footer-col p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .footer-links a {
+            color: #cbb9ad;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-right: 4px;
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #33231e;
+            font-size: 0.82rem;
+            color: #927e72;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 14px;
+            }
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+            .btn-custom-tailor span {
+                display: none;
+            }
+            .btn-custom-tailor {
+                padding: 9px 12px;
+            }
+            .modal-card {
+                grid-template-columns: 1fr;
+                max-height: 88vh;
+            }
+            .modal-img-col {
+                height: 220px;
+                min-height: 220px;
+            }
+            .culture-banner {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .culture-img {
+                height: 180px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشريط العلوي للإعلانات -->
+    <div class="announcement-bar">
+        <span><i class="fa-solid fa-truck-fast"></i> توصيل متاح لجميع ولايات السودان، دول الخليج، ومصر</span>
+        <span style="opacity: 0.6;">|</span>
+        <span><i class="fa-solid fa-ribbon"></i> أجود أنواع القطن السويسري والتوتال الأصلي</span>
+    </div>
+
+    <!-- ترويسة المتجر -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="brand-logo">
+                <div class="logo-emblem">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>متجر النيلين</h1>
+                    <p>أزياء وأصالة الرجل السوداني</p>
+                </div>
+            </a>
+
+            <div class="nav-actions">
+                <button class="btn-custom-tailor" onclick="openTailorModal()">
+                    <i class="fa-solid fa-scissors"></i>
+                    <span>طلب تفصيل خاص</span>
+                </button>
+
+                <button class="btn-icon" onclick="toggleCart()" aria-label="السلة">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- واجهة البطل الترحيبية -->
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="hero-badge"><i class="fa-solid fa-award"></i> الهيبة السودانية بأرقى المعايير</span>
+            <h2>أصالة <span>الجلابية السودانية</span> وفخامة الملبس</h2>
+            <p>تشكيلة مختارة بعناية لأفخم الجلابيب، أطقم "على الله"، المراكيب الفاشرية المصنوعة يدوياً، والعمم والشيلان من أرقى مصانع النسيج السويسرية واليابانية.</p>
+            
+            <div class="hero-features">
+                <div class="hero-feat-item"><i class="fa-solid fa-check-circle" style="color:var(--accent)"></i> أقمشة توتال أصلي 100%</div>
+                <div class="hero-feat-item"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--accent)"></i> تطريز يدوي متقن</div>
+                <div class="hero-feat-item"><i class="fa-solid fa-shield-halved" style="color:var(--accent)"></i> ضمان جودة التفصيل والخامة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- شريط البحث والتصنيفات -->
+    <section class="controls-section">
+        <div class="controls-card">
+            <div class="search-sort-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن جلابية، مركوب، على الله، شال..." oninput="filterProducts()">
+                </div>
+                <select class="sort-select" id="sortSelect" onchange="filterProducts()">
+                    <option value="featured">الأكثر تميزاً</option>
+                    <option value="price-low">السعر: من الأقل للأعلى</option>
+                    <option value="price-high">السعر: من الأعلى للأقل</option>
+                </select>
+            </div>
+
+            <!-- أزرار التصنيف السريع -->
+            <div class="categories-scroll">
+                <button class="cat-btn active" onclick="setCategory('all', this)"><i class="fa-solid fa-border-all"></i> كل المنتجات</button>
+                <button class="cat-btn" onclick="setCategory('jalabiya', this)"><i class="fa-solid fa-shirt"></i> جلابيب تقليدية فاخرة</button>
+                <button class="cat-btn" onclick="setCategory('ala-allah', this)"><i class="fa-solid fa-vest-patches"></i> أطقم "على الله"</button>
+                <button class="cat-btn" onclick="setCategory('markoub', this)"><i class="fa-solid fa-shoe-prints"></i> مراكيب فاشرية أصلية</button>
+                <button class="cat-btn" onclick="setCategory('accessories', this)"><i class="fa-solid fa-scarf"></i> العمم، الشيلان، والصديري</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي والمنتجات -->
+    <main class="container">
+        <div class="section-header">
+            <h3>التشكيلة الملكية الحالية</h3>
+            <span id="productCount" style="color: var(--text-muted); font-size: 0.9rem; font-weight:600;"></span>
+        </div>
+
+        <!-- شبكة المنتجات -->
+        <div class="products-grid" id="productsGrid">
+            <!-- سيتم توليد البطاقات عبر جافاسكريبت -->
+        </div>
+
+        <!-- بطاقة الثقافة والزي السوداني -->
+        <section class="culture-banner">
+            <div class="culture-img">
+                <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=700&q=80" alt="التراث والأناقة السودانية">
+            </div>
+            <div class="culture-content">
+                <h4>وقار المظهر السوداني عبر الأجيال</h4>
+                <p>
+                    الزي الرجالي السوداني ليس مجرد لباس، بل هوية ورمز للأصالة والكرم والفروسية. تتكامل الجلابية ذات الياقة المفتوحة أو "الليقة" الملكية مع العمة البيضاء الطاهرة والشال السويسري المطرز، ليكتمل المظهر بالمركوب الفاشري المصنوع بأيدي أمهر الحرفيين في دارفور.
+                </p>
+                <div class="culture-tags">
+                    <span class="c-tag">#توتال_سويسري</span>
+                    <span class="c-tag">#مركوب_جلد_طبيعي</span>
+                    <span class="c-tag">#لبسة_على_الله</span>
+                    <span class="c-tag">#عمة_وسديري</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- سلة المشتريات (Drawer) -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartOnOverlay(event)">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> حقيبة التسوق</h3>
+                <button class="btn-close" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="cart-items" id="cartItemsContainer">
+                <!-- محتويات السلة -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>المجموع الإجمالي:</span>
+                    <div class="cart-total-sum" id="cartTotalSum">0 ج.س</div>
+                </div>
+
+                <div class="checkout-actions">
+                    <a href="#" class="btn-checkout-wa" id="whatsappOrderBtn" onclick="checkoutViaWhatsApp(event)">
+                        <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i>
+                        <span>تأكيد الطلب السريع عبر واتساب</span>
+                    </a>
+                    <button class="btn-checkout-normal" onclick="completeOrderDirect()">
+                        <i class="fa-solid fa-check"></i> إتمام الشراء المباشر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة تفاصيل المنتج المودال (Product Detail Modal) -->
+    <div class="modal-overlay" id="productModal" onclick="closeModalOnOverlay(event)">
+        <div class="modal-card">
+            <button class="modal-close-btn" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-img-col">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-info-col">
+                <span class="modal-category-text" id="modalCategory"></span>
+                <h3 id="modalTitle"></h3>
+                <div class="modal-price-box" id="modalPrice"></div>
+                <p class="modal-desc" id="modalDesc"></p>
+
+                <div id="modalSpecs">
+                    <!-- تفاصيل الخامة والميزات -->
+                </div>
+
+                <div class="size-picker-title">اختر المقاس المطلوب:</div>
+                <div class="sizes-row" id="modalSizesRow">
+                    <!-- أحجام الزي -->
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-add-cart" style="flex:1; padding: 12px; font-size: 1rem;" id="modalAddBtn">
+                        <i class="fa-solid fa-cart-plus"></i> إضافة للسلة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة طلب تفصيل مخصص (Custom Tailoring Modal) -->
+    <div class="modal-overlay" id="tailorModal" onclick="closeTailorOnOverlay(event)">
+        <div class="modal-card" style="max-width: 620px; display: block; padding: 25px;">
+            <button class="modal-close-btn" onclick="closeTailorModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h3 style="font-family:'Amiri', serif; font-size:1.8rem; color:var(--primary); margin-bottom:6px;">
+                    <i class="fa-solid fa-scissors" style="color:var(--accent);"></i> خدمة التفصيل السوداني الملكي
+                </h3>
+                <p style="font-size:0.88rem; color:#6b5a50;">
+                    أدخل قياساتك وسيتولى أمهر الترزية السودانيين تفصيل جلابيتك وفق أعلى معايير الحرفة.
+                </p>
+            </div>
+
+            <form class="tailor-form" onsubmit="submitTailorRequest(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" required placeholder="مثال: محمد عثمان">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف (واتساب)</label>
+                        <input type="tel" required placeholder="09xxxxxxx">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>نوع القماش المفضل</label>
+                        <select required id="tailorFabric">
+                            <option value="توتال سويسري فاخر نخب أول">توتال سويسري فاخر نخب أول</option>
+                            <option value="قماش شكري ياباني أبيض ثلجي">قماش شكري ياباني أبيض ثلجي</option>
+                            <option value="كتان طبيعي (لطقم على الله)">كتان طبيعي (لطقم على الله)</option>
+                            <option value="توتال لندني أصلي">توتال لندني أصلي</option>
+                            <option value="زبدة هندي مريح">زبدة هندي مريح</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>طراز الياقة (الليقة)</label>
+                        <select required id="tailorCollar">
+                            <option value="رقبة مقفولة كلاسيك (ليقة)">رقبة مقفولة كلاسيك (ليقة)</option>
+                            <option value="جلابية بلدية تقليدية مفتوحة">جلابية بلدية تقليدية مفتوحة</option>
+                            <option value="قصة سفاري (طقم على الله)">قصة سفاري (طقم على الله)</option>
+                            <option value="تطريز سوداني هادئ على الصدر">تطريز سوداني هادئ على الصدر</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الطول الإجمالي (بالبوصة)</label>
+                        <input type="number" required placeholder="مثال: 58 أو 60" min="40" max="75">
+                    </div>
+                    <div class="form-group">
+                        <label>عرض الكتف واليدين</label>
+                        <input type="text" placeholder="مثال: كتف 19 بوصة / كم 24">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>المدينة وملاحظات التوصيل</label>
+                    <textarea rows="2" placeholder="المدينة، العنوان، أي تطريزات خاصة ترغب بها..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-checkout-wa" style="width: 100%; justify-content: center; margin-top: 5px;">
+                    <i class="fa-brands fa-whatsapp"></i> إرسال المقاسات والتواصل للتفصيل
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- رسالة تأكيد إشعار Toast -->
+    <div class="toast" id="toastBox">
+        <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+        <span id="toastMsg">تمت الإضافة إلى الحقيبة بنجاح!</span>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>متجر النيلين</h5>
+                <p>الوجهة الأولى للأناقة والرجولة السودانية، نوفر أجود الأقمشة السويسرية واليابانية، والمراكيب الفاشرية المصنوعة يدوياً بحرفية عالية.</p>
+                <div style="display:flex; gap:12px; font-size:1.2rem; color:var(--accent);">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>أقسام المتجر</h5>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="setCategory('jalabiya')">جلابيب توتال سويسري ولندني</a></li>
+                    <li><a href="#" onclick="setCategory('ala-allah')">أطقم على الله الكتان والكاجوال</a></li>
+                    <li><a href="#" onclick="setCategory('markoub')">مراكيب فاشرية (جلد نمر، أصلة، بقري)</a></li>
+                    <li><a href="#" onclick="setCategory('accessories')">أطقم العمة والشال والسديري</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>الضمان والخدمة</h5>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="openTailorModal()">دليل المقاسات السودانية</a></li>
+                    <li><a href="#">سياسة استرجاع واستبدال سهلة</a></li>
+                    <li><a href="#">شحن سريع للخليج ومصر والسودان</a></li>
+                    <li><a href="#">ضمان الأقمشة التوتال الأصلية</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>خدمة العملاء والطلب</h5>
+                <p><i class="fa-solid fa-phone" style="color:var(--accent); margin-left:6px;"></i> هاتف / واتساب: 249912345678+</p>
+                <p><i class="fa-solid fa-location-dot" style="color:var(--accent); margin-left:6px;"></i> بورتسودان / الخرطوم / الرياض / القاهرة</p>
+                <p><i class="fa-solid fa-envelope" style="color:var(--accent); margin-left:6px;"></i> info@alneilayn-store.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة © متجر النيلين للأزياء الرجالية السودانية 2025</p>
+        </div>
+    </footer>
+
+    <!-- منطق وتفاعل التطبيق (JavaScript) -->
+    <script>
+        /* قاعدة بيانات منتجات الملابس الرجالية السودانية مع صور دقيقة وواقعية */
+        const productsData = [
+            {
+                id: 1,
+                name: "جلابية توتال سويسري أصلي 'البرنس'",
+                category: "jalabiya",
+                categoryAr: "جلابية سودانية ملكية",
+                price: 48000,
+                fabric: "توتال سويسري 100% ممتاز",
+                badge: "الأكثر طلباً",
+                image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=80",
+                desc: "جلابية سودانية كلاسيكية فاخرة مفصلة من قماش التوتال السويسري الناعم والبارد، ناصعة البياض مع تطريز راقٍ وخفي على الأكمام والليقة. تمنحك هيبة ووقار الرجل السوداني في الأعياد والمناسبات الكبرى.",
+                specs: ["خامة قطنية 100% مقاومة للتجعد", "تطريز سادة ناعم", "أزرار صدفية يدوية أنيقة"],
+                sizes: ["56 قصير", "58 وسط", "60 طويل", "62 عريض"]
+            },
+            {
+                id: 2,
+                name: "طقم 'على الله' سفاري كتان كحلي راقٍ",
+                category: "ala-allah",
+                categoryAr: "لبسة على الله",
+                price: 36000,
+                fabric: "كتان إيطالي نقي",
+                badge: "ستايل شبابي فخم",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80",
+                desc: "طقم 'على الله' السوداني العصري المريح، يتكون من قميص سفاري بجيوب أمامية تقليدية وبنطال متناسق. مناسب للعمل، المناسبات الاجتماعية والصلوات، بتصميم يجمع بين الأصالة والحداثة.",
+                specs: ["قماش كتان معالج عالي التهوية", "جيوب صدر بأزرار خشبية", "قصة مريحة وعملية جداً"],
+                sizes: ["M", "L", "XL", "XXL"]
+            },
+            {
+                id: 3,
+                name: "مركوب فاشري أصلي جلد طبيعي مطرز",
+                category: "markoub",
+                categoryAr: "مركوب فاشري",
+                price: 32000,
+                fabric: "جلد طبيعي مدبوغ يدوياً",
+                badge: "صناعة يدوية دافورية",
+                image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=700&q=80",
+                desc: "حذاء المركوب الفاشري السوداني الشهير، مصنوع يدوياً في مدينة الفاشر التاريخية من أمتن أنواع الجلود الطبيعية. نقشات هندسية تراثية ترمز للأصالة ومريح جداً للمشي.",
+                specs: ["قاعدة جلدية مع طبقة مقاومة للانزلاق", "خياطة يدوية بخيوط قطنية مشمعة", "يدوم لسنوات مع المحافظة عليه"],
+                sizes: ["40", "41", "42", "43", "44", "45"]
+            },
+            {
+                id: 4,
+                name: "طقم العمة السودانية والشال التوتال السويسري",
+                category: "accessories",
+                categoryAr: "إكسسوارات وعمم",
+                price: 24000,
+                fabric: "توتال سويسري خفيف",
+                badge: "طقم الهيبة",
+                image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=700&q=80",
+                desc: "طقم متكامل يتضمن عمة سودانية بطول 5 أمتار من التوتال السويسري عالي الجودة سهل اللف والتشكيل، مع شال كتف مطرز بحواف ذهبية تزيد مظهر الجلابية فخامة.",
+                specs: ["عمة 5.5 متر خفيفة وثابتة", "شال بأطراف مهدبة وتطريز كلاسيكي", "مقاوم للاصفرار مع الغسيل"],
+                sizes: ["مقاس موحد قياسي"]
+            },
+            {
+                id: 5,
+                name: "سديري سوداني مخملي مطرز 'ملكي'",
+                category: "accessories",
+                categoryAr: "سديري سوداني",
+                price: 26000,
+                fabric: "مخمل ناعم مع حرير",
+                badge: "مناسبات وأعراس",
+                image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=700&q=80",
+                desc: "الصديري السوداني الفاخر المخصص للعرسان والمناسبات السعيدة. يلبس فوق الجلابية ليضفي فخامة ملكية. مكسو بتطريزات القيطان التراثية من الصدر والظهر.",
+                specs: ["بطانة داخلية من الساتان البارد", "جيوب داخلية مخفية", "تطريز متقن بخيوط حريرية متينة"],
+                sizes: ["M", "L", "XL", "XXL"]
+            },
+            {
+                id: 6,
+                name: "جلابية قماش ياباني شكري أبيض ثلجي",
+                category: "jalabiya",
+                categoryAr: "جلابية سودانية",
+                price: 42000,
+                fabric: "قماش شكري ياباني مستورد",
+                badge: "خامة صيفية باردة",
+                image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
+                desc: "جلابية مصممة بياقة مقفولة ناعمة من أفخر خامات الشكري الياباني، تتميز ببريق هادئ وانسيابية مريحة أثناء الحركة. لا تلتصق بالجسم ومثالية للمناخ الحار.",
+                specs: ["نسيج متين لا يتكرمش بسهولة", "ياقة مقواة بحشوة سويسرية راقية", "سحاب داخلي أمامي مخفي"],
+                sizes: ["56", "58", "60", "62"]
+            },
+            {
+                id: 7,
+                name: "طقم 'على الله' سكري بدرجة رمل النيل",
+                category: "ala-allah",
+                categoryAr: "لبسة على الله",
+                price: 34000,
+                fabric: "قطن مخلوط خفيف ومريح",
+                badge: "الأكثر مبيعاً",
+                image: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=700&q=80",
+                desc: "لبسة على الله باللون السكري الأصيل، مفصلة بدقة بياقة شيرواني هادئة وأكمام عملية، تمثل الاختيار المفضل للوجهاء والشباب في اللقاءات غير الرسمية والزيارات العائلية.",
+                specs: ["مقاومة للتجعد", "بنطال مطاطي مريح مع حبل شد", "خياطة مزدوجة لمتانة استثنائية"],
+                sizes: ["M", "L", "XL", "XXL"]
+            },
+            {
+                id: 8,
+                name: "مركوب جلد أصلة نخب أول مرصع",
+                category: "markoub",
+                categoryAr: "مركوب فاشري تراثي",
+                price: 52000,
+                fabric: "جلد طبيعي بنقشة الأصلة النادرة",
+                badge: "إصدار نخب أول",
+                image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80",
+                desc: "مركوب سوداني فائق الفخامة والندرة، مصنع ببراعة حرفية منتقاة. يعتبر هدية الزعماء والوجهاء في الأعراس والمحافل الرسمية، ويعكس أرفع درجات الفخامة.",
+                specs: ["مبطن من الداخل بجلد الغزال المريح", "خياطة دقيقة ونقشة مميزة", "قاعدة متينة تدوم لأعوام"],
+                sizes: ["41", "42", "43", "44"]
+            },
+            {
+                id: 9,
+                name: "عصا أبنوس سودانية مطعمة بالفضة العتيقة",
+                category: "accessories",
+                categoryAr: "إكسسوارات وهيبة",
+                price: 19000,
+                fabric: "خشب أبنوس طبيعي ثقيل",
+                badge: "قطعة تراثية",
+                image: "https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=700&q=80",
+                desc: "عصا تقليدية تعبر عن الهيبة ومكانة الرجل السوداني، منحوتة يدوياً من خشب الأبنوس الأسود المقاوم للزمن ومطعمة بحلقات من الفضة التراثية النقية ومقبض مريح.",
+                specs: ["طول 95 سم قياسي", "مقبض صلب منحوت بعناية", "خاتم فضي نقوش تراثية"],
+                sizes: ["مقاس موحد 95 سم"]
+            }
+        ];
+
+        /* حالة السلة */
+        let cart = [];
+        let activeCategory = 'all';
+        let currentModalProduct = null;
+        let selectedModalSize = null;
+
+        /* دالة تهيئة وتحميل المنتجات */
+        function initStore() {
+            renderProducts(productsData);
+            updateCartUI();
+        }
+
+        /* تنسيق الأرقام بالجنيه السوداني */
+        function formatPrice(num) {
+            return new Intl.NumberFormat('ar-SD').format(num) + " ج.س";
+        }
+
+        /* عرض المنتجات */
+        function renderProducts(list) {
+            const grid = document.getElementById('productsGrid');
+            const countLabel = document.getElementById('productCount');
+            grid.innerHTML = '';
+
+            countLabel.textContent = `عرض ${list.length} قطع مختارة`;
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align:center; padding:50px 20px; color:#8c786b;">
+                        <i class="fa-solid fa-vest" style="font-size:3.5rem; margin-bottom:15px; opacity:0.5;"></i>
+                        <h4 style="font-size:1.3rem; margin-bottom:8px;">عذراً، لم نعثر على قطع تطابق بحثك</h4>
+                        <p style="font-size:0.9rem;">جرب كتابة اسم قماش مختلف أو غير التصنيف المحدد.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="card-img-wrap" onclick="openProductModal(${item.id})">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                        ${item.badge ? `<span class="tag-badge">${item.badge}</span>` : ''}
+                        <span class="fabric-badge"><i class="fa-solid fa-layer-group"></i> ${item.fabric}</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">${item.categoryAr}</span>
+                        <h4 class="card-title" onclick="openProductModal(${item.id})">${item.name}</h4>
+                        <p class="card-desc">${item.desc}</p>
+                        <div class="card-footer">
+                            <div class="card-price">
+                                <span class="price-val">${formatPrice(item.price)}</span>
+                                <span class="price-currency">شامل الضريبة والتغليف</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="quickAddToCart(${item.id})">
+                                <i class="fa-solid fa-cart-plus"></i> إضافة
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        /* فلترة وبحث وتصنيف المنتجات */
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const sortVal = document.getElementById('sortSelect').value;
+
+            let filtered = productsData.filter(item => {
+                const matchesCat = (activeCategory === 'all') || (item.category === activeCategory);
+                const matchesSearch = item.name.toLowerCase().includes(query) || 
+                                      item.desc.toLowerCase().includes(query) || 
+                                      item.fabric.toLowerCase().includes(query);
+                return matchesCat && matchesSearch;
+            });
+
+            if (sortVal === 'price-low') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-high') {
+                filtered.sort((a, b) => b.price - a.price);
+            }
+
+            renderProducts(filtered);
+        }
+
+        function setCategory(cat, btn) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            filterProducts();
+        }
+
+        /* إضافة سريعة للسلة */
+        function quickAddToCart(id) {
+            const item = productsData.find(p => p.id === id);
+            if (!item) return;
+            const defaultSize = item.sizes[0] || 'قياسي';
+            addToCart(item, defaultSize);
+        }
+
+        /* دالة إضافة منتج للسلة */
+        function addToCart(product, size) {
+            const cartItemId = `${product.id}-${size}`;
+            const existing = cart.find(i => i.cartItemId === cartItemId);
+
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    cartItemId: cartItemId,
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    size: size,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`تمت إضافة "${product.name}" إلى الحقيبة`);
+        }
+
+        /* تحديث السلة وحساب المجموع */
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            const container = document.getElementById('cartItemsContainer');
+            const totalSum = document.getElementById('cartTotalSum');
+
+            const totalCount = cart.reduce((acc, curr) => acc + curr.quantity, 0);
+            const totalCash = cart.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
+
+            badge.textContent = totalCount;
+            totalSum.textContent = formatPrice(totalCash);
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-cart-state">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <p style="font-weight:700; font-size:1.1rem; color:#4a382f; margin-bottom:6px;">حقيبتك فارغة حالياً</p>
+                        <p style="font-size:0.85rem;">اختر ما يناسبك من تشكيلة الجلابيب والمراكيب السودانية لإضافتها هنا.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = '';
+            cart.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'cart-item';
+                row.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <div>
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-size">المقاس: <strong>${item.size}</strong></div>
+                        </div>
+                        <div class="cart-qty-row">
+                            <span class="cart-item-price">${formatPrice(item.price * item.quantity)}</span>
+                            <div class="qty-controls">
+                                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', -1)">-</button>
+                                <span class="qty-display">${item.quantity}</span>
+                                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', 1)">+</button>
+                            </div>
+                            <button class="btn-remove-item" onclick="removeItem('${item.cartItemId}')">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        /* تعديل الكمية */
+        function changeQty(cartItemId, delta) {
+            const item = cart.find(i => i.cartItemId === cartItemId);
+            if (!item) return;
+
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.cartItemId !== cartItemId);
+            }
+            updateCartUI();
+        }
+
+        /* حذف عنصر */
+        function removeItem(cartItemId) {
+            cart = cart.filter(i => i.cartItemId !== cartItemId);
+            updateCartUI();
+        }
+
+        /* فتح وإغلاق السلة */
+        function toggleCart() {
+            const overlay = document.getElementById('cartOverlay');
+            overlay.classList.toggle('active');
+        }
+
+        function closeCartOnOverlay(e) {
+            if (e.target.id === 'cartOverlay') {
+                toggleCart();
+            }
+        }
+
+        /* نافذة تفاصيل المنتج (Modal) */
+        function openProductModal(id) {
+            const item = productsData.find(p => p.id === id);
+            if (!item) return;
+
+            currentModalProduct = item;
+            selectedModalSize = item.sizes[0];
+
+            document.getElementById('modalImg').src = item.image;
+            document.getElementById('modalCategory').textContent = item.categoryAr;
+            document.getElementById('modalTitle').textContent = item.name;
+            document.getElementById('modalPrice').textContent = formatPrice(item.price);
+            document.getElementById('modalDesc').textContent = item.desc;
+
+            // المواصفات
+            const specsContainer = document.getElementById('modalSpecs');
+            specsContainer.innerHTML = item.specs.map(s => `
+                <div class="spec-item"><i class="fa-solid fa-circle-check"></i> <span>${s}</span></div>
+            `).join('');
+
+            // الأحجام
+            const sizesRow = document.getElementById('modalSizesRow');
+            sizesRow.innerHTML = item.sizes.map((s, index) => `
+                <div class="size-chip ${index === 0 ? 'active' : ''}" onclick="selectModalSize('${s}', this)">
+                    ${s}
+                </div>
+            `).join('');
+
+            // زر الإضافة
+            const addBtn = document.getElementById('modalAddBtn');
+            addBtn.onclick = function() {
+                addToCart(currentModalProduct, selectedModalSize);
+                closeProductModal();
+            };
+
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function selectModalSize(size, chipElem) {
+            selectedModalSize = size;
+            document.querySelectorAll('.size-chip').forEach(c => c.classList.remove('active'));
+            chipElem.classList.add('active');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target.id === 'productModal') {
+                closeProductModal();
+            }
+        }
+
+        /* نافذة طلب تفصيل مخصص */
+        function openTailorModal() {
+            document.getElementById('tailorModal').classList.add('active');
+        }
+
+        function closeTailorModal() {
+            document.getElementById('tailorModal').classList.remove('active');
+        }
+
+        function closeTailorOnOverlay(e) {
+            if (e.target.id === 'tailorModal') {
+                closeTailorModal();
+            }
+        }
+
+        function submitTailorRequest(e) {
+            e.preventDefault();
+            const fabric = document.getElementById('tailorFabric').value;
+            const collar = document.getElementById('tailorCollar').value;
+
+            const msg = `السلام عليكم، أود طلب تفصيل جلابية سودانية خاصة: %0A- نوع القماش: ${encodeURIComponent(fabric)}%0A- نوع الياقة: ${encodeURIComponent(collar)}%0Aيرجى تزويدي بالأسعار ومدة التنفيذ.`;
+            closeTailorModal();
+            showToast("تم تحضير تفاصيل طلب التفصيل، جاري التحويل للواتساب...");
+            
+            setTimeout(() => {
+                window.open(`https://wa.me/249912345678?text=${msg}`, '_blank');
+            }, 1000);
+        }
+
+        /* إرسال الطلب عبر الواتساب */
+        function checkoutViaWhatsApp(e) {
+            e.preventDefault();
+            if (cart.length === 0) {
+                alert("يرجى إضافة قطع إلى الحقيبة أولاً.");
+                return;
+            }
+
+            let msg = "مرحباً متجر النيلين، أود تأكيد طلبي للأزياء السودانية:%0A%0A";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const sub = item.price * item.quantity;
+                total += sub;
+                msg += `${index + 1}. *${encodeURIComponent(item.name)}*%0A   - المقاس: ${encodeURIComponent(item.size)}%0A   - العدد: ${item.quantity}%0A   - السعر: ${sub} ج.س%0A%0A`;
+            });
+
+            msg += `*الإجمالي الكلي:* ${total} ج.س%0A`;
+            msg += "الرجاء تأكيد توافر القطع وتفاصيل التوصيل.";
+
+            window.open(`https://wa.me/249912345678?text=${msg}`, '_blank');
+        }
+
+        function completeOrderDirect() {
+            if (cart.length === 0) {
+                alert("الحقيبة فارغة، تفضل باختيار جلابيبك وملبسك أولاً.");
+                return;
+            }
+            alert("شكراً لاختيارك متجر النيلين! تم حفظ طلبك وسيتواصل معك مندوبنا لتأكيد القياسات ومدينة الاستلام فوراً.");
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        /* إظهار Toast */
+        function showToast(text) {
+            const toast = document.getElementById('toastBox');
+            const msg = document.getElementById('toastMsg');
+            msg.textContent = text;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // تشغيل التطبيق عند التحميل
+        document.addEventListener('DOMContentLoaded', initStore);
+    </script>
+</body>
+</html>
